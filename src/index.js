@@ -1,55 +1,13 @@
 import "./style.css";
-import bfs from "./BFS";
-import position from "./position";
+import { createChessboard } from "./chessboard";
 
-function knightMoves(start, end) {
-  if (
-    start === null ||
-    end === null ||
-    start[0] < 1 ||
-    start[0] > 8 ||
-    start[1] < 1 ||
-    start[1] > 8 ||
-    start.length != 2 ||
-    end[0] < 1 ||
-    end[0] > 8 ||
-    end[1] < 1 ||
-    end[1] > 8 ||
-    end.length != 2
-  )
-    return null;
+// First a chessboard is created
+// Upon creating chessboard assign event listeners to each of the 64 blocks
+// assign unique ID to each of the 64 blocks
 
-  const q = [];
-  q.push(position(start));
-  let path = bfs(q, end);
+// When both knight and end position are assigned simulation is called
+// Simulation calls the bfs algorithm which returns the array of shortest moves
+// After that, the path is animated and shown on chessboard
+// Upon clicking reset button, the chessboard is reset and you can play again
 
-  return `You made it in ${
-    path.move
-  } moves! Here's your path:\n${reconstructPathInString(path)}`;
-}
-
-function reconstructPathInString(path) {
-  const xMap = {
-    1: "a",
-    2: "b",
-    3: "c",
-    4: "d",
-    5: "e",
-    6: "f",
-    7: "g",
-    8: "h",
-  };
-
-  path.pos[0] = xMap[path.pos[0]];
-  let pathString = path.pos;
-
-  while (path.parent) {
-    path = path.parent;
-    path.pos[0] = xMap[path.pos[0]];
-    pathString = `${path.pos} -> ${pathString}`;
-  }
-
-  return pathString;
-}
-
-console.log(knightMoves([1, 1], [8, 8]));
+createChessboard();

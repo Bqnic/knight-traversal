@@ -1,8 +1,34 @@
-import position from "./position";
+import { position } from "./position";
+import { xMap } from "./position";
 
 // implementation of breadth first search algorithm for finding the shortest path
 
-export default function bfs(q, end) {
+export default function knightMoves(start, end) {
+  const q = [];
+  q.push(position(start));
+  let path = bfs(q, end);
+
+  return reconstructPath(path);
+}
+
+function reconstructPath(path) {
+  path.pos[0] = xMap[path.pos[0]];
+  let pathArr = [];
+
+  let pathString = path.pos[0] + path.pos[1];
+  pathArr.push(pathString);
+
+  while (path.parent) {
+    path = path.parent;
+    path.pos[0] = xMap[path.pos[0]];
+    let pathString = path.pos[0] + path.pos[1];
+    pathArr.push(pathString);
+  }
+
+  return pathArr;
+}
+
+function bfs(q, end) {
   while (q.length > 0) {
     let positionProcessing = q.shift();
     let arr = positionProcessing.pos;
