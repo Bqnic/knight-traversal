@@ -9,7 +9,7 @@ export default function bfs(q, end) {
 
     if (arr[0] === end[0] && arr[1] === end[1]) return positionProcessing;
 
-    if (arr[0] + 2 < 8 && arr[1] + 1 < 8) {
+    if (arr[0] + 2 <= 8 && arr[1] + 1 <= 8) {
       q.push(
         position(
           [arr[0] + 2, arr[1] + 1],
@@ -19,7 +19,7 @@ export default function bfs(q, end) {
       );
     }
 
-    if (arr[0] + 2 < 8 && arr[1] - 1 >= 0) {
+    if (arr[0] + 2 <= 8 && arr[1] - 1 >= 1) {
       q.push(
         position(
           [arr[0] + 2, arr[1] - 1],
@@ -29,7 +29,7 @@ export default function bfs(q, end) {
       );
     }
 
-    if (arr[0] - 2 >= 0 && arr[1] - 1 >= 0) {
+    if (arr[0] - 2 >= 1 && arr[1] - 1 >= 1) {
       q.push(
         position(
           [arr[0] - 2, arr[1] - 1],
@@ -39,7 +39,7 @@ export default function bfs(q, end) {
       );
     }
 
-    if (arr[0] - 2 >= 0 && arr[1] + 1 < 8) {
+    if (arr[0] - 2 >= 1 && arr[1] + 1 <= 8) {
       q.push(
         position(
           [arr[0] - 2, arr[1] + 1],
@@ -49,7 +49,7 @@ export default function bfs(q, end) {
       );
     }
 
-    if (arr[0] + 1 < 8 && arr[1] - 2 >= 0) {
+    if (arr[0] + 1 <= 8 && arr[1] - 2 >= 1) {
       q.push(
         position(
           [arr[0] + 1, arr[1] - 2],
@@ -59,7 +59,7 @@ export default function bfs(q, end) {
       );
     }
 
-    if (arr[0] - 1 >= 0 && arr[1] - 2 >= 0) {
+    if (arr[0] - 1 >= 1 && arr[1] - 2 >= 1) {
       q.push(
         position(
           [arr[0] - 1, arr[1] - 2],
@@ -69,7 +69,7 @@ export default function bfs(q, end) {
       );
     }
 
-    if (arr[0] + 1 < 8 && arr[1] + 2 < 8) {
+    if (arr[0] + 1 <= 8 && arr[1] + 2 <= 8) {
       q.push(
         position(
           [arr[0] + 1, arr[1] + 2],
@@ -79,7 +79,7 @@ export default function bfs(q, end) {
       );
     }
 
-    if (arr[0] - 1 >= 0 && arr[1] + 2 < 8) {
+    if (arr[0] - 1 >= 1 && arr[1] + 2 <= 8) {
       q.push(
         position(
           [arr[0] - 1, arr[1] + 2],
