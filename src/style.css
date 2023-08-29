@@ -213,11 +213,11 @@ body {
 @media screen and (min-width: 1200px) {
   .header {
     padding: 20px;
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .chessboard {
-    margin-top: 100px;
-    margin-right: 100px;
+    margin-top: 50px;
+    margin-right: 50px;
   }
 
   .container {
@@ -229,8 +229,8 @@ body {
   }
 
   .chess-block {
-    height: 90px;
-    width: 90px;
+    height: 80px;
+    width: 80px;
     font-size: 2rem;
     font-weight: 600;
   }
