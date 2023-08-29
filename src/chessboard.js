@@ -56,11 +56,11 @@ let endPos = null;
 
 function addListenersToBlocks(chessBlock) {
   const knightIcon = document.createElement("img");
-  knightIcon.src = "../images/chess-knight.svg";
+  knightIcon.src = "images/chess-knight.svg";
   knightIcon.alt = "K";
 
   const flagIcon = document.createElement("img");
-  flagIcon.src = "../images/flag-checkered.svg";
+  flagIcon.src = "images/flag-checkered.svg";
   flagIcon.alt = "End";
 
   chessBlock.addEventListener("mouseenter", () => {

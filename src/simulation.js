@@ -33,7 +33,7 @@ async function animatePath(pathArr) {
     const nextChessBlock = document.getElementById(pathArr[1]);
 
     const knightIcon = document.createElement("img");
-    knightIcon.src = "../images/chess-knight.svg";
+    knightIcon.src = "images/chess-knight.svg";
     knightIcon.alt = "K";
 
     await new Promise((resolve) => setTimeout(resolve, delay));
@@ -58,11 +58,11 @@ async function animatePath(pathArr) {
     const nextChessBlock = document.getElementById(nextPosition);
 
     const circleIcon = document.createElement("img");
-    circleIcon.src = "../images/circle-outline.svg";
+    circleIcon.src = "images/circle-outline.svg";
     circleIcon.alt = ".";
 
     const knightIcon = document.createElement("img");
-    knightIcon.src = "../images/chess-knight.svg";
+    knightIcon.src = "images/chess-knight.svg";
     knightIcon.alt = "K";
 
     chessBlock.appendChild(circleIcon);

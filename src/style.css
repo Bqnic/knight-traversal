@@ -131,3 +131,107 @@ body {
   font-size: 1.3rem;
   transition: 0.4s;
 }
+
+@media screen and (min-width: 300px) {
+  .header {
+    padding: 10px;
+    font-size: 1.6rem;
+  }
+  .chessboard {
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .path-text {
+    font-size: 1.4rem;
+  }
+
+  .chess-block {
+    height: 38px;
+    width: 38px;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .header {
+    padding: 10px;
+    font-size: 2rem;
+  }
+  .chessboard {
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .path-text {
+    font-size: 1.5rem;
+  }
+
+  .chess-block {
+    height: 50px;
+    width: 50px;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .header {
+    padding: 20px;
+    font-size: 2rem;
+  }
+  .chessboard {
+    margin-top: 40px;
+    margin-right: 40px;
+  }
+
+  .container {
+    flex-direction: row;
+  }
+
+  .path-text {
+    font-size: 1.8rem;
+  }
+
+  .chess-block {
+    height: 70px;
+    width: 70px;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    padding: 20px;
+    font-size: 3rem;
+  }
+  .chessboard {
+    margin-top: 100px;
+    margin-right: 100px;
+  }
+
+  .container {
+    flex-direction: row;
+  }
+
+  .path-text {
+    font-size: 2rem;
+  }
+
+  .chess-block {
+    height: 90px;
+    width: 90px;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
